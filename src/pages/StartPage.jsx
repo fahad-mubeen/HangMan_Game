@@ -27,7 +27,7 @@ function StartPage() {
   }, []);
 
   return (
-    <div className="bg-gray-800 min-h-screen flex items-center justify-center p-4">
+    <div className="bg-black min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-lg bg-gray-700 rounded-lg shadow-lg p-6">
 
         <div className="text-center text-4xl font-bold text-yellow-400 mb-6">Welcome To Hangman Game</div>
