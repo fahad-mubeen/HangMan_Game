@@ -13,9 +13,7 @@ function HagmanStage({ step }) {
     const stageImage = [Level1, Level2, Level3, Level4, Level5, Level6, Level7, Level8];
 
     return (
-        <div className="m-2">
-            <img src={step < stageImage.length ? stageImage[step] : stageImage[stageImage.length - 1] } alt="Hangman Stage" />
-        </div>
+            <img src={step < stageImage.length ? stageImage[step] : stageImage[stageImage.length - 1] } alt="Hangman Stage"/>
     )
 }
 
