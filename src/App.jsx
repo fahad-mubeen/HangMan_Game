@@ -4,7 +4,6 @@ import StartPage from './pages/startPage';
 import SinglePlayerPlayPage from './pages/singlePlayerPlayPage';
 
 function App() {
-  SinglePlayerPlayPage();
   return (
     <Routes>
       <Route path='/' element={ <StartPage /> } />
