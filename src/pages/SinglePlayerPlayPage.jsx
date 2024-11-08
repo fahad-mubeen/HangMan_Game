@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import HangmanWords from "../components/HangmanWordsData/HangmanWordsData.json";
 import LetterButtons from "../components/LetterButtons/LetterButtons";
 import MaskedText from "../components/MaskedText/MaskedText";
@@ -8,6 +9,7 @@ const wordObject =
   HangmanWords[Math.floor(Math.random() * HangmanWords.length)];
 
 function SinglePlayerPlayPage() {
+  const navigate = useNavigate();
   let word = wordObject.word;
   word = word.toUpperCase();
   const hint = wordObject.hint;
@@ -35,7 +37,7 @@ function SinglePlayerPlayPage() {
           alert("You Lost!");
           setGuessedLetters([]);
           setHagmanStage(0);
-          document.location.reload();
+          navigate('/SinglePlayerPlayPage');
         }, 100);
       } else {
         setHagmanStage(hagmanStage + 1);
@@ -50,7 +52,7 @@ function SinglePlayerPlayPage() {
         alert("You Won!");
         setGuessedLetters([]);
         setHagmanStage(0);
-        document.location.reload();
+        navigate('/SinglePlayerPlayPage');
       }, 100);
     }
   }

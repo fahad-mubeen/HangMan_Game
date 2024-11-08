@@ -8,7 +8,6 @@ function StartPage() {
 
   const handleStartGame = () => {
     if (mode === 'singlePlayer') {
-      console.log("Starting single-player game...");
       navigate('/SinglePlayerPlayPage');
     } else {
       alert("Please select a game mode.");
