@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Footer from "../Footer";
 
 function StartPage() {
   const [mode, setMode] = useState('');
@@ -63,6 +64,10 @@ function StartPage() {
           Start Game
         </button>
 
+        <div>
+          <Footer />  
+        </div>
+        
       </div>
     </div>
   );
